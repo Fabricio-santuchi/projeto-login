@@ -62,16 +62,16 @@ section#login > div#formulario{
     padding: 10px;
 }
 
-section#login > div#formulario > h1{
+div#formulario > h1{
     text-align: center;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
-section#login > div#formulario > p{
-    font-size: 0.78em;
+div#formulario > p{
+    font-size: 0.8em;
 }
 
-section#login > div#formulario > form > p#lg1{
+div#formulario > form > p#lg1{
     background-color: var(--cor-lilas);
     padding: 2px;
     margin-bottom: 5px;
