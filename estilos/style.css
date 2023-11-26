@@ -34,15 +34,15 @@ section#login{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden; /*Tudo que está fora da borda e cortado e fica invisivel assim não precisa fazer o border-radius na imagem.*/
 
     background-color: white;
-    height: 510px;
+    height: 515px;
     width: 250px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.473);
 
+    transform: translate(-50%, -50%); /*sempre final do codigo.*/
     transition: width 0.3s, height 0.3s; /* tempo de transição isso fazer cria uma animação! */
     transition-timing-function: ease; /* suavizar a animação! */
 }
@@ -71,53 +71,79 @@ div#formulario > p{
     font-size: 0.8em;
 }
 
-div#formulario > form > p#lg1{
+form > div.campo{
+    display: block;
     background-color: var(--cor-lilas);
-    padding: 2px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    border-radius: 10px;
+    border: 2px solid var(--cor-lilas);
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
 }
 
-p#lg1 > input{
-    background-color: #94CFCD;
-    border-radius: 10px;
-    height: 37px;
-    width: 87%;
-    border: 0px;
-    font-size: 15px;
+div.campo > label {
+    display:none;
 }
 
-p#lg2 > input{
-    position: relative;
+div.campo > span{
     color: white;
-    background-color: var(--cor-verde);
-    margin-bottom: 5px;
-    border-radius: 10px;
-    width: 100%;
-    height: 40px;
-    border: 1px solid var(--cor-verde);
-    font-size: 15px;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
 }
 
-p#lg2 > input:hover{
-    background-color: #366e6b;
+div.campo > input{
+    background-color: #82eeea;
+    font-size: 1em;
+    width: calc(100% - 44.5px);
+    /*calculo em css*/
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-12px); /*movimentar para cima.*/
 }
 
-p#lg3 > input{
-    position: relative;
-    color: rgba(0, 0, 0, 0.644);
+div.campo > input:focus-within{ /*deixa a caixa que está em foto com a cor que vc quiser.*/
     background-color: white;
-    margin-bottom: 5px;
-    border-radius: 10px;
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
     width: 100%;
     height: 40px;
-    border: 1px solid var(--cor-verde);
-    font-size: 15px;
+    background-color: var(--cor-verde);
+    color: white;
+    border: none;
+    border-radius: 5px;   
 }
 
-p#lg3 > input:hover{
-    background-color: #98e7e3;
+form > input[type=submit]:hover{
+    background-color: #2b4d4b;
+    cursor: pointer;
 }
 
+form > a.botao{
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    margin-top: 5px;
+    background-color: white;
+    color: #49a09d;
+    border: 1px solid #49a09d;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+form > a.botao:hover{
+    background-color: #6cd3cf;
+}
+
+form > a.botao > span {
+    font-size: 0.8em;
+}
 
